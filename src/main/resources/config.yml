@@ -1,0 +1,52 @@
+ranks:
+
+  newbie:
+    advancements: 0
+
+  wanderer:
+    advancements: 10
+
+  explorer:
+    advancements: 20
+
+  guardian:
+    advancements: 30
+
+  luminary:
+    advancements: 40
+
+  eclipse:
+    advancements: 50
+
+  celestial:
+    advancements: 60
+
+  eternal:
+    advancements: 70
+
+  divine:
+    advancements: 80
+
+  ascendant:
+    advancements: 90
+
+  archon:
+    advancements: 100
+
+broadcast-rankup: true
+
+sound:
+  enabled: true
+  type: ENTITY_PLAYER_LEVELUP
+
+title:
+  enabled: true
+  title: "&6Rank Up!"
+  subtitle: "&fYou are now %rank%"
+
+playerrank-format:
+  player: "&7Player: &f%player%"
+  rank: "&7Rank: &e%rank%"
+  advancements: "&7Advancements: &f%advancements%"
+  next-rank: "&7Next Rank: &e%next_rank%"
+  remaining: "&7Remaining: &f%remaining%"

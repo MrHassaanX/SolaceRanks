@@ -1,0 +1,88 @@
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.kotlin
+
+### IntelliJ IDEA ###
+.idea/
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Runtime / local server data ###
+logs/
+crash-reports/
+plugins/
+server/
+servers/
+test-server/
+run/
+runs/
+world/
+world_nether/
+world_the_end/
+players.yml
+plugins/SolaceRanks/players.yml
+
+### Local databases and caches ###
+*.db
+*.sqlite
+*.sqlite3
+*.h2.db
+*.mv.db
+*.trace.db
+*.cache
+
+### Temporary files ###
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+### Credentials and local environment ###
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
+secrets.yml
+secrets.yaml
+credentials.yml
+credentials.yaml

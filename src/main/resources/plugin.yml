@@ -1,0 +1,34 @@
+name: SolaceRanks
+version: '1.0.0'
+main: com.solacemc.solaceranks.SolaceRanks
+api-version: '1.21'
+
+author: STAX GAMING
+description: Advancement based rank progression for SolaceMC
+
+depend:
+  - LuckPerms
+
+softdepend:
+  - floodgate
+
+commands:
+  rank:
+    description: Shows your current advancement rank.
+    usage: /rank [help|reload|top|sync|recalculate|info]
+  playerrank:
+    description: Shows a stored player's current advancement rank.
+    usage: /playerrank <player>
+
+permissions:
+  solaceranks.rank:
+    description: Allows players to view their rank.
+    default: true
+
+  solaceranks.playerrank:
+    description: Allows viewing another player's stored rank.
+    default: true
+
+  solaceranks.admin:
+    description: Allows SolaceRanks administrative commands.
+    default: op

@@ -1,0 +1,25 @@
+prefix: "&6&lSolaceRanks &8>> "
+
+rank-up: "&aCongratulations! You are now &e%rank%&a."
+
+rank-up-broadcast: "&e%player% &ahas ranked up to &e%rank%&a."
+
+current-rank: "&7Current Rank: &e%rank%"
+
+advancements: "&7Advancements: &f%count%"
+
+next-rank: "&7Next Rank: &e%rank% &8(&f%needed% &7more&8)"
+
+max-rank: "&7Next Rank: &aYou are at the highest rank."
+
+reload: "&aConfiguration reloaded."
+
+no-permission: "&cYou do not have permission to use this command."
+
+player-only: "&cOnly players may use this command."
+
+usage: "&cUsage: /rank [help|reload|top|sync|recalculate|info]"
+
+playerrank-usage: "&cUsage: /playerrank <player>"
+
+playerrank-not-found: "&cNo stored rank data was found for &e%player%&c. They may not have joined before."
