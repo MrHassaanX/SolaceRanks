@@ -39,17 +39,22 @@ The original v1 release remains permanently archived through Git history, a rele
 - Configurable messages
 - Permission-based administrative commands
 
-## Requirements
+## Compatibility
 
-SolaceRanks v1.0.0 was developed against:
+SolaceRanks v1.0.0 was originally developed against:
 
 - Paper `1.21.8`
 - Java `21`
-- LuckPerms
+
+It was also successfully used on:
+
+- Minecraft/Paper `26.2`
+
+Minecraft/Paper `26.3` and other versions have not yet been formally tested.
+
+SolaceRanks may work on additional versions where the Bukkit/Paper APIs it uses remain compatible, but only tested versions are listed as confirmed.
 
 LuckPerms is a required plugin dependency. Floodgate is optional and is detected when installed.
-
-This v1 release targets the Paper version listed above. Broader Minecraft compatibility is not claimed for v1.0.0.
 
 ## Installation
 
