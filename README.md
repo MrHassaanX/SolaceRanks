@@ -4,6 +4,7 @@
 [![Java](https://img.shields.io/badge/Java-21-orange)](https://www.oracle.com/java/)
 [![Paper](https://img.shields.io/badge/Paper-1.21.8-2ea44f)](https://papermc.io/)
 [![Latest Release](https://img.shields.io/badge/release-v1.0.0-blue)](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
 An advancement-based rank progression plugin for Minecraft servers, originally created for SolaceMC.
 
@@ -195,6 +196,14 @@ The original SolaceRanks implementation is intentionally preserved through:
 - GitHub Release `v1.0.0`
 
 This preservation keeps the first SolaceMC-specific implementation available before later public/universal development begins.
+
+## License
+
+Copyright (C) 2026 Mohammed Hassaan
+
+SolaceRanks is licensed under the GNU General Public License v3.0 only (`GPL-3.0-only`).
+
+You may use, study, modify, and redistribute this software under the terms of the GPL v3. Distributed modified versions must comply with the GPL's source-code and licensing requirements.
 
 ## Credits
 
