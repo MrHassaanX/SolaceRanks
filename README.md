@@ -1,22 +1,36 @@
-# SolaceRanks
+<div align="center">
 
-[![Version](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0)
-[![Java](https://img.shields.io/badge/Java-21-orange)](https://www.oracle.com/java/)
-[![Paper](https://img.shields.io/badge/Paper-1.21.8-2ea44f)](https://papermc.io/)
-[![Latest Release](https://img.shields.io/badge/release-v1.0.0-blue)](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+# SolaceRanks 1.x
 
-An advancement-based rank progression plugin for Minecraft servers, originally created for SolaceMC.
+### The original SolaceMC advancement ranking system.
 
-SolaceRanks automatically tracks completed Minecraft advancements and updates players' LuckPerms ranks.
+[![Version](https://img.shields.io/badge/version-v1.0.0-2f6f9f)](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0)
+[![Java](https://img.shields.io/badge/Java-21-e76f00)](https://github.com/MrHassaanX/SolaceRanks/blob/legacy/1.x/build.gradle)
+[![Paper](https://img.shields.io/badge/Paper-1.21.8-26804a)](https://github.com/MrHassaanX/SolaceRanks/blob/legacy/1.x/build.gradle)
+[![License](https://img.shields.io/badge/license-GPL--3.0--only-555)](LICENSE)
 
-## About
+</div>
+
+---
+
+> [!IMPORTANT]
+> **Legacy 1.x maintenance branch:** This branch keeps the original SolaceMC codebase available for maintenance. New-generation development takes place on [`develop`](https://github.com/MrHassaanX/SolaceRanks/tree/develop). The exact original release is the immutable [`v1.0.0` tag](https://github.com/MrHassaanX/SolaceRanks/tree/v1.0.0), pointing to `1d226b51ed083c0a13261d1b7e1b05d7392ca580`.
+
+## 🕰️ Legacy Status
 
 SolaceRanks was originally developed specifically for the SolaceMC Minecraft server. Version 1.0.0 represents the original SolaceMC implementation and has been preserved before the project evolves into a more universal public plugin in future versions.
 
-The original v1 release remains permanently archived through Git history, a release tag, a legacy branch, and a GitHub Release.
+This is the legacy/maintenance line, not the latest development branch. The original v1.0.0 binary and source are available from the [GitHub Release](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0); v2 planning and development stay separate.
 
-## Features
+## 📦 Download
+
+Use the preserved [v1.0.0 release](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0). It includes the JAR, `SHA256SUMS.txt`, and GitHub-generated source archives.
+
+```text
+SolaceRanks-1.0.0.jar
+```
+
+## ✨ Features
 
 - Advancement-based rank progression
 - Counts completed advancements
@@ -40,7 +54,7 @@ The original v1 release remains permanently archived through Git history, a rele
 - Configurable messages
 - Permission-based administrative commands
 
-## Compatibility
+## 🧱 Compatibility
 
 SolaceRanks v1.0.0 was originally developed against:
 
@@ -57,7 +71,7 @@ SolaceRanks may work on additional versions where the Bukkit/Paper APIs it uses 
 
 LuckPerms is a required plugin dependency. Floodgate is optional and is detected when installed.
 
-## Installation
+## 🚀 Installation
 
 1. Download `SolaceRanks-1.0.0.jar` from the [v1.0.0 GitHub Release](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0).
 2. Install LuckPerms on your server.
@@ -66,7 +80,7 @@ LuckPerms is a required plugin dependency. Floodgate is optional and is detected
 5. Configure ranks, messages, promotion broadcasts, sounds, and titles as needed.
 6. Restart the server or use the available reload command after configuration changes.
 
-## Default Ranks
+## 📊 Original Rank Progression
 
 These are the original v1 SolaceMC rank thresholds.
 
@@ -84,7 +98,7 @@ These are the original v1 SolaceMC rank thresholds.
 | 90-99 | Ascendant |
 | 100+ | Archon |
 
-## Commands
+## 🎮 Commands
 
 | Command | Description | Permission |
 | --- | --- | --- |
@@ -97,7 +111,18 @@ These are the original v1 SolaceMC rank thresholds.
 | `/rank info <player>` | Shows detailed stored rank information for a player. | `solaceranks.admin` |
 | `/playerrank <player>` | Shows another stored player's rank, advancement count, next rank, and remaining advancements. | `solaceranks.playerrank` |
 
-## Permissions
+```text
+/rank
+/rank top
+/rank help
+/playerrank <player>
+/rank reload
+/rank sync <player>
+/rank recalculate
+/rank info <player>
+```
+
+## 🔐 Permissions
 
 | Permission | Default | Description |
 | --- | --- | --- |
@@ -114,7 +139,13 @@ Administrative commands requiring `solaceranks.admin`:
 
 Server owners can grant these permissions through LuckPerms.
 
-## Configuration
+```text
+solaceranks.rank
+solaceranks.playerrank
+solaceranks.admin
+```
+
+## ⚙️ Configuration
 
 SolaceRanks v1 uses the following files:
 
@@ -135,23 +166,22 @@ SolaceRanks v1 uses the following files:
 
 Do not manually edit `players.yml` while the server is running.
 
-## Bedrock / Geyser / Floodgate
+```yaml
+broadcast-rankup: true
+sound:
+  enabled: true
+  type: ENTITY_PLAYER_LEVELUP
+title:
+  enabled: true
+  title: "&6Rank Up!"
+  subtitle: "&fYou are now %rank%"
+```
+
+## 🌐 Bedrock / Geyser / Floodgate
 
 Floodgate is optional. When Floodgate is installed, SolaceRanks uses the Floodgate API to detect Bedrock players.
 
 When Floodgate is unavailable, the v1 implementation can fall back to the original `br_` username convention. Player data is still stored by UUID, not by username, so Java and Bedrock players can both be tracked safely in the persistent database.
-
-## Download
-
-Download the original v1.0.0 release here:
-
-[https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0](https://github.com/MrHassaanX/SolaceRanks/releases/tag/v1.0.0)
-
-The release includes:
-
-- `SolaceRanks-1.0.0.jar`
-- `SHA256SUMS.txt`
-- Source archives generated by GitHub
 
 ## Version History
 
@@ -165,7 +195,7 @@ This version represents the original server-specific implementation before the f
 
 SolaceRanks is planned to evolve into a more flexible public plugin in future releases. Future features and compatibility targets will be documented when they are implemented.
 
-## Building From Source
+## 🛠️ Building From Source
 
 SolaceRanks v1 requires Java 21.
 
@@ -187,7 +217,7 @@ Build outputs are written to:
 build/libs/
 ```
 
-## Project History
+## Preservation
 
 The original SolaceRanks implementation is intentionally preserved through:
 
@@ -197,7 +227,7 @@ The original SolaceRanks implementation is intentionally preserved through:
 
 This preservation keeps the first SolaceMC-specific implementation available before later public/universal development begins.
 
-## License
+## 📜 License
 
 Copyright (C) 2026 Mohammed Hassaan
 
@@ -205,7 +235,7 @@ SolaceRanks is licensed under the GNU General Public License v3.0 only (`GPL-3.0
 
 You may use, study, modify, and redistribute this software under the terms of the GPL v3. Distributed modified versions must comply with the GPL's source-code and licensing requirements.
 
-## Credits
+## ❤️ Credits
 
 Created by Mohammed Hassaan / MrHassaanX.
 
